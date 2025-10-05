@@ -5,6 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baryp-Kel Airlines</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    .responsive-cards-section {
+      padding: 60px 20px;
+      background-color: #f0f4ff; 
+      text-align: center;
+      color: #333; 
+    }
+
+    .responsive-cards-section h2 {
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #002366; 
+    }
+
+    .mq-card-container {
+      display: flex;
+      flex-direction: column; 
+      gap: 30px; 
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .mq-card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px; 
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1); 
+      transition: transform 0.3s ease;
+      text-align: left;
+    }
+
+    .mq-card:hover {
+        transform: translateY(-5px); 
+    }
+
+    .mq-card h3 {
+        color: #002366;
+        margin-bottom: 10px;
+    }
+
+
+    @media (min-width: 768px) {
+      .mq-card-container {
+        flex-direction: row; 
+        flex-wrap: wrap;
+      }
+      .mq-card {
+        flex: 1 1 calc(50% - 30px); 
+      }
+    }
+
+    @media (min-width: 992px) {
+      .mq-card {
+        flex: 1 1 calc(33.333% - 30px);
+      }
+    }
+  </style>
 </head>
 <body>
 <header>
@@ -46,6 +104,25 @@
       <button type="submit">Search Flights</button>
     </form>
   </section>
+
+  <section class="responsive-cards-section">
+    <h2>Why Choose Baryp-Kel?</h2>
+    <div class="mq-card-container">
+      <div class="mq-card">
+        <h3>Uncompromising Safety</h3>
+        <p>Your safety is our top priority. Our modern fleet is maintained to the highest international standards, and our experienced crew is trained for any situation.</p>
+      </div>
+      <div class="mq-card">
+        <h3>Exceptional Comfort</h3>
+        <p>From spacious seating to quality in-flight service, we ensure your journey is as comfortable and pleasant as possible, whether you're flying for business or leisure.</p>
+      </div>
+      <div class="mq-card">
+        <h3>Affordable Fares</h3>
+        <p>We believe that air travel should be accessible to everyone. We offer competitive pricing and flexible fare options without compromising on quality or service.</p>
+      </div>
+    </div>
+  </section>
+
 
   <footer>
     <p>&copy; 2025 Baryp-Kel Airlines | Danial & Nurgaly</p>
