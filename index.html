@@ -62,7 +62,6 @@
         flex: 1 1 calc(33.333% - 30px);
       }
     }
-    /* End of custom styles for card section */
   </style>
 </head>
 <body>
@@ -92,6 +91,19 @@
       </div>
     </div>
   </section>
+
+  <div id="popup-overlay" class="popup-overlay">
+    <div class="popup-content">
+      <button id="popup-close">&times;</button>
+      <h2>Contact Us</h2>
+      <form class="popup-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="3" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
 
 
   <section class="ticket-booking">
@@ -184,8 +196,10 @@
 </section>
 
 <footer>
-  <p>&copy; 2025 Baryp-Kel Airlines | Danial & Nurgaly</p>
+  <p>&copy; 2025 Baryp-Kel Airlines | Danial & Nurgaly<span id="current-date-time"></span></p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
