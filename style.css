@@ -634,3 +634,364 @@ footer {
 footer p {
   margin: 5px 0;
 }
+
+/* --- NON-BOOTSTRAP STYLES ADDED TO SUPPORT NEW HTML STRUCTURES --- */
+
+/* Utility & Container */
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    color: #002366;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.lead-text {
+    font-size: 1.25rem;
+    color: #444;
+}
+
+.no-list-style {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.list-item {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+/* Index.html - Fly Smarter Section */
+.fly-smarter-section {
+    padding: 50px 0;
+    background-color: #f8f9fa; /* Replaces bg-light */
+}
+
+.fly-smarter-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.fly-smarter-image-block {
+    flex: 0 0 40%;
+    max-width: 40%;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem; /* rounded-4 */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* shadow-sm */
+}
+
+.fly-smarter-text-block {
+    flex: 1;
+}
+
+/* Index.html - What You Get Section */
+.what-you-get-section {
+    padding: 50px 0;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card-item {
+    flex: 1 1 300px;
+    margin: 0;
+}
+
+.service-card-custom {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* shadow-sm */
+    border-radius: 0.5rem; /* rounded-4 */
+    overflow: hidden;
+    background: white;
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body-custom {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title-custom {
+    color: #002366;
+    margin-bottom: 0.5rem;
+}
+
+.card-text-custom {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Small Buttons for cards */
+.btn-outline-small {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 2px solid #007bff;
+    color: #007bff;
+    margin-top: 10px;
+}
+
+.btn-filled-large {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    background: #002366;
+    color: white;
+}
+
+.btn-filled-large:hover {
+    background: #0040a0;
+}
+
+.btn-filled-form {
+    background: #002366;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.btn-filled-form:hover {
+    background: #0040a0;
+}
+
+
+/* Services.html */
+.services-main {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.services-title {
+    font-size: 42px;
+    color: #002366;
+    margin-bottom: 40px;
+}
+
+/* Simplified Carousel/Gallery Styling */
+.city-carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.city-carousel-inner {
+    width: 100%;
+    max-width: 1000px; 
+}
+
+.city-carousel {
+    display: flex;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
+    border-radius: 0.5rem; 
+    overflow: hidden;
+    max-height: 450px;
+}
+
+.city-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.city-slide img {
+    width: 100%;
+    height: 450px; 
+    object-fit: cover; 
+    object-position: center;
+}
+
+/* Flight Classes Grid */
+.flight-classes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.class-card-item {
+    flex: 1 1 300px;
+    max-width: 350px;
+}
+
+.class-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
+    background: white;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.class-card .card-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.class-card .card-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-card .card-content h3 {
+    color: #002366;
+    margin-bottom: 0.5rem;
+}
+
+.class-card .card-content p {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.btn-filled-small {
+    display: block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background: #002366;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-secondary-small {
+    background: #6c757d;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-services {
+    text-align: center;
+    padding: 15px;
+    background-color: #002366;
+    color: white;
+}
+
+
+/* Contact.html */
+.contact-section {
+    min-height: 100vh;
+    background: #f9f9f9;
+    color: #222;
+    padding: 120px 20px 60px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form-custom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.form-group-half {
+    width: calc(50% - 10px);
+}
+
+.form-group-full {
+    width: 100%;
+}
+
+.contact-form-custom label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #002366;
+}
+
+.contact-form-custom input,
+.contact-form-custom textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 0px; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.contact-form-custom button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .fly-smarter-content {
+        flex-direction: column;
+    }
+    .fly-smarter-image-block {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .form-group-half {
+        width: 100%;
+    }
+    .card-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-card-item {
+        max-width: 90%;
+    }
+}

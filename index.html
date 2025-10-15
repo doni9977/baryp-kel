@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Baryp-Kel Airlines</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous">
-
-
+  
   <style>
     .responsive-cards-section {
       padding: 60px 20px;
@@ -67,6 +62,7 @@
         flex: 1 1 calc(33.333% - 30px);
       }
     }
+    /* End of custom styles for card section */
   </style>
 </head>
 <body>
@@ -128,58 +124,58 @@
     </div>
   </section>
 
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center g-4">
-      <div class="col-12 col-md-6 col-lg-6" style="width: 40%;">
-        <img src="image/Almaty.jpeg" alt="Discover Kazakhstan" class="img-fluid rounded-4 shadow-sm" style="width: 100%; height: auto;">
+<section class="fly-smarter-section">
+  <div class="container-custom">
+    <div class="fly-smarter-content">
+      <div class="fly-smarter-image-block">
+        <img src="image/Almaty.jpeg" alt="Discover Kazakhstan" class="responsive-img">
       </div>
-      <div class="col-12 col-md-6 col-lg-6">
-        <h2 class="mb-3" style="color:#002366;">Fly Smarter with Baryp-Kel</h2>
-        <p class="lead mb-3">Plan flexible routes, compare fares, and get the best deals across Central Asia.</p>
-        <ul class="list-unstyled">
-          <li class="mb-2">✓ Easy booking and 24/7 support</li>
-          <li class="mb-2">✓ Modern fleet and high safety standards</li>
-          <li class="mb-2">✓ Rewards and special offers for frequent travelers</li>
+      <div class="fly-smarter-text-block">
+        <h2 class="section-title">Fly Smarter with Baryp-Kel</h2>
+        <p class="lead-text">Plan flexible routes, compare fares, and get the best deals across Central Asia.</p>
+        <ul class="no-list-style">
+          <li class="list-item">✓ Easy booking and 24/7 support</li>
+          <li class="list-item">✓ Modern fleet and high safety standards</li>
+          <li class="list-item">✓ Rewards and special offers for frequent travelers</li>
         </ul>
-        <a href="services.html" class="btn btn-primary mt-2">Our Services</a>
+        <a href="services.html" class="btn-filled-large">Our Services</a>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4" style="color:#002366;">What You Get</h2>
-    <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="image/economy.jpg" class="card-img-top fixed-h" alt="Affordable fares">
-          <div class="card-body">
-            <h5 class="card-title">Affordable Fares</h5>
-            <p class="card-text">Flexible prices with no hidden fees. Save on every flight.</p>
-            <a href="services.html" class="btn btn-outline-primary">Learn more</a>
+<section class="what-you-get-section">
+  <div class="container-custom">
+    <h2 class="text-center section-title">What You Get</h2>
+    <div class="card-grid">
+      <div class="service-card-item">
+        <div class="service-card-custom">
+          <img src="image/economy.jpg" class="card-img" alt="Affordable fares">
+          <div class="card-body-custom">
+            <h3 class="card-title-custom">Affordable Fares</h3>
+            <p class="card-text-custom">Flexible prices with no hidden fees. Save on every flight.</p>
+            <a href="services.html" class="btn-outline-small">Learn more</a>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="image/comfort.jpg" class="card-img-top fixed-h" alt="Comfort on board">
-          <div class="card-body">
-            <h5 class="card-title">Comfort on Board</h5>
-            <p class="card-text">Extra space, comfortable seats, and an attentive crew.</p>
-            <a href="services.html" class="btn btn-outline-primary">Learn more</a>
+      <div class="service-card-item">
+        <div class="service-card-custom">
+          <img src="image/comfort.jpg" class="card-img" alt="Comfort on board">
+          <div class="card-body-custom">
+            <h3 class="card-title-custom">Comfort on Board</h3>
+            <p class="card-text-custom">Extra space, comfortable seats, and an attentive crew.</p>
+            <a href="services.html" class="btn-outline-small">Learn more</a>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm rounded-4">
-          <img src="image/business.jpeg" class="card-img-top fixed-h" alt="Business services">
-          <div class="card-body">
-            <h5 class="card-title">Business Services</h5>
-            <p class="card-text">Priority boarding, lounges, and premium service for business trips.</p>
-            <a href="services.html" class="btn btn-outline-primary">Learn more</a>
+      <div class="service-card-item">
+        <div class="service-card-custom">
+          <img src="image/business.jpeg" class="card-img" alt="Business services">
+          <div class="card-body-custom">
+            <h3 class="card-title-custom">Business Services</h3>
+            <p class="card-text-custom">Priority boarding, lounges, and premium service for business trips.</p>
+            <a href="services.html" class="btn-outline-small">Learn more</a>
           </div>
         </div>
       </div>
@@ -190,10 +186,6 @@
 <footer>
   <p>&copy; 2025 Baryp-Kel Airlines | Danial & Nurgaly</p>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 
 </body>
 </html>
