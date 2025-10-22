@@ -1,4 +1,4 @@
-// TASK 4: Data Structure (Objects and Array) for City Gallery
+// TASK 4: 
 const cityData = [
     { name: 'Astana', image: 'image/Astana.jpeg' },
     { name: 'Almaty', image: 'image/Almaty.jpeg' },
@@ -11,7 +11,7 @@ const cityData = [
     { name: 'Karganda', image: 'image/Karganda.jpeg' },
 ]; 
 
-// TASK 6: Sound Effects Setup
+// TASK 6: 
 const notificationSound = new Audio('notification.mp3'); 
 
 function playNotificationSound() {
@@ -22,7 +22,7 @@ function playNotificationSound() {
 }
 
 
-// TASK 7: Modified Validation for Animation
+// TASK 7: 
 function validateRegistrationForm(event) {
     const form = document.querySelector('.register-box form');
     if (!form) return true;
@@ -115,7 +115,7 @@ function setupAccordion() {
 }
 
 
-// TASK 6: Modified Popup for Sound Effects
+// TASK 6: 
 function setupPopup() {
     const openButton = document.querySelector('.hero-buttons .btn-filled'); 
     const closeButton = document.getElementById('popup-close');
@@ -175,7 +175,7 @@ function setupBackgroundColorChanger() {
     }
 }
 
-// TASK 1: Day/Night Theme Toggle
+// TASK 1:
 function setupThemeToggle() {
     const toggleButton = document.getElementById('theme-toggle-btn');
     const body = document.body;
@@ -207,7 +207,7 @@ function setupThemeToggle() {
     }
 }
 
-// TASK 4: Display Time-based Greeting using Switch Statement
+// TASK 4:
 function displayTimeBasedGreeting() {
     const greetingElement = document.getElementById('time-based-greeting');
     if (!greetingElement) return;
@@ -233,7 +233,7 @@ function displayTimeBasedGreeting() {
     greetingElement.textContent = greeting;
 }
 
-// TASK 3: Higher-Order Function (Simulated fetch with a callback)
+// TASK 3: 
 function submitDataAsync(data, callback) {
     console.log('Simulating data submission:', data);
     
@@ -243,7 +243,7 @@ function submitDataAsync(data, callback) {
     }, 1000); 
 }
 
-// TASK 3: Asynchronous Form Submission with Callback
+// TASK 3:
 function setupContactFormSubmission() {
     const form = document.getElementById('contact-form');
     const successMessage = document.getElementById('contact-success-message');
@@ -263,6 +263,7 @@ function setupContactFormSubmission() {
                 form.reset(); 
                 successMessage.style.display = 'block'; 
                 
+                
                 setTimeout(() => {
                     successMessage.style.display = 'none';
                 }, 5000);
@@ -273,14 +274,13 @@ function setupContactFormSubmission() {
     });
 }
 
-// TASK 4: Dynamic content generation using Arrays/Loops/HOF (Used for setupCityGallery below)
+// TASK 4: 
 function renderCityCarousel() {
     const carouselInner = document.querySelector('.city-carousel');
     if (!carouselInner) return;
 
     carouselInner.innerHTML = '';
     
-    // TASK 4: Use forEach (Higher-Order Function) to iterate and generate content
     cityData.forEach((city, index) => {
         const slide = document.createElement('div');
         slide.classList.add('city-slide');
@@ -297,7 +297,7 @@ function renderCityCarousel() {
     });
 }
 
-// TASK 2: Image Gallery/Carousel functionality (Manipulating attributes and classes)
+// TASK 2:
 function setupCityGallery() {
     const mainCarouselWrapper = document.querySelector('.city-carousel-inner');
     const mainCarousel = document.querySelector('.city-carousel');
@@ -307,7 +307,7 @@ function setupCityGallery() {
     thumbnailsContainer.classList.add('city-thumbnails');
     mainCarouselWrapper.appendChild(thumbnailsContainer);
     
-    // TASK 4: Use map (Higher-Order Function) to create thumbnail HTML
+    // TASK 4:
     const thumbnailsHTML = cityData.map((city, index) => `
         <img 
             src="${city.image}" 
@@ -325,7 +325,7 @@ function setupCityGallery() {
     thumbnailImages.forEach((thumbnail, index) => {
         thumbnail.addEventListener('click', (event) => {
             
-            // TASK 2: Manipulate attribute/display (changing the visible slide by class)
+            // TASK 2: 
             citySlides.forEach(slide => slide.classList.remove('active'));
             citySlides[index].classList.add('active');
 
@@ -368,16 +368,16 @@ document.addEventListener('DOMContentLoaded', () => {
     setupPopup();
     setupBackgroundColorChanger(); 
 
-    // TASK 1: Theme Toggle
+    // TASK 1: 
     setupThemeToggle();
 
-    // TASK 4: Time-based Greeting
+    // TASK 4: 
     displayTimeBasedGreeting();
 
-    // TASK 3: Asynchronous Contact Form Submission
+    // TASK 3:
     setupContactFormSubmission();
     
-    // TASK 2 & 4: City Gallery/Carousel (only runs on services.html)
+    // TASK 2 & 4: 
     if (document.querySelector('.city-carousel')) { 
         renderCityCarousel();
         setupCityGallery();
