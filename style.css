@@ -9,12 +9,9 @@ body {
   color: #fff;
   background: url("image/plane.jpg") center/cover no-repeat fixed;
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme */
+  transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* ------------------------------------------------ */
-/* TASK 1: Dark Theme Styles */
-/* ------------------------------------------------ */
 
 .btn-theme-toggle {
     background: #ffd700;
@@ -139,7 +136,6 @@ body.dark-theme footer,
 body.dark-theme .footer-services {
   background: #000;
 }
-/* ------------------------------------------------ */
 
 header {
   position: fixed;
@@ -172,7 +168,6 @@ header {
   align-items: center;
   gap: 40px; 
 }
-/* ... [Остальной существующий код header, nav и .hero] ... */
 nav ul {
   list-style: none;
   margin: 0;
@@ -345,7 +340,6 @@ nav a:hover {
   padding: 120px 20px 60px;
   text-align: center;
 }
-/* ... [Остальной существующий код .about-section, .about-intro и т.д.] ... */
 
 .about-section h1 {
   font-size: 42px;
@@ -796,10 +790,9 @@ footer p {
     color: #444;
 }
 
-/* Index.html - Fly Smarter Section */
 .fly-smarter-section {
     padding: 50px 0;
-    background-color: #f8f9fa; /* Replaces bg-light */
+    background-color: #f8f9fa; 
 }
 
 .fly-smarter-content {
@@ -816,15 +809,14 @@ footer p {
 .responsive-img {
     width: 100%;
     height: auto;
-    border-radius: 0.5rem; /* rounded-4 */
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* shadow-sm */
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
 }
 
 .fly-smarter-text-block {
     flex: 1;
 }
 
-/* Index.html - What You Get Section */
 .what-you-get-section {
     padding: 50px 0;
 }
@@ -874,7 +866,6 @@ footer p {
     flex-grow: 1;
 }
 
-/* Small Buttons for cards */
 .btn-outline-small {
     display: inline-block;
     padding: 8px 16px;
@@ -919,7 +910,6 @@ footer p {
 }
 
 
-/* Services.html */
 .services-main {
     padding-top: 120px;
     padding-bottom: 60px;
@@ -931,12 +921,11 @@ footer p {
     margin-bottom: 40px;
 }
 
-/* TASK 2: City Carousel & Thumbnails Styles */
 .city-carousel-wrapper {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
-    flex-direction: column; /* Allows thumbnails to stack below */
+    flex-direction: column;
     align-items: center;
 }
 
@@ -947,7 +936,7 @@ footer p {
 
 .city-carousel {
     display: flex;
-    overflow-x: hidden; /* Hide scrollbar, handled by class switching */
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
@@ -960,12 +949,12 @@ footer p {
 .city-slide {
     flex: 0 0 100%;
     scroll-snap-align: start;
-    display: none; /* Hide all by default */
+    display: none; 
     transition: opacity 0.3s ease;
 }
 
 .city-slide.active {
-    display: block; /* Show active slide */
+    display: block; 
 }
 
 .city-slide img {
@@ -1001,11 +990,9 @@ footer p {
 }
 
 .thumbnail-img.active-thumbnail {
-    border-color: #002366; /* Highlight active thumbnail */
+    border-color: #002366; 
 }
-/* END TASK 2 STYLES */
 
-/* Flight Classes Grid */
 .flight-classes-grid {
     display: flex;
     flex-wrap: wrap;
@@ -1013,7 +1000,6 @@ footer p {
     justify-content: center;
     margin-top: 30px;
 }
-/* ... [Остальной существующий код flight-classes-grid, class-card, footer] ... */
 
 .class-card-item {
     flex: 1 1 300px;
@@ -1090,7 +1076,6 @@ footer p {
 }
 
 
-/* Contact.html */
 .contact-section {
     min-height: 100vh;
     background: #f9f9f9;

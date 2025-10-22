@@ -11,7 +11,7 @@ const cityData = [
     { name: 'Karganda', image: 'image/Karganda.jpeg' },
 ]; 
 
-// TASK 6: Sound Effects Setup (You must have 'notification.mp3' file)
+// TASK 6: Sound Effects Setup
 const notificationSound = new Audio('notification.mp3'); 
 
 function playNotificationSound() {
@@ -83,7 +83,6 @@ function validateRegistrationForm(event) {
         if (registerButton) {
             registerButton.classList.add('shake-animation'); // TASK 7: Add Animation
             
-            // Remove the class after the animation ends to allow it to be re-triggered
             setTimeout(() => {
                 registerButton.classList.remove('shake-animation');
             }, 500); 
@@ -181,7 +180,6 @@ function setupThemeToggle() {
     const toggleButton = document.getElementById('theme-toggle-btn');
     const body = document.body;
 
-    // Check for saved theme preference in local storage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
@@ -239,12 +237,10 @@ function displayTimeBasedGreeting() {
 function submitDataAsync(data, callback) {
     console.log('Simulating data submission:', data);
     
-    // Simulate a network delay (e.g., from fetch)
     setTimeout(() => {
-        // Assume submission is always successful for the assignment
         const success = true; 
-        callback(success); // Execute callback function
-    }, 1000); // 1 second delay
+        callback(success); 
+    }, 1000); 
 }
 
 // TASK 3: Asynchronous Form Submission with Callback
@@ -254,7 +250,7 @@ function setupContactFormSubmission() {
     if (!form) return;
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault(); 
 
         const formData = {
             name: document.getElementById('name').value,
@@ -262,13 +258,11 @@ function setupContactFormSubmission() {
             message: document.getElementById('message').value
         };
 
-        // Simulate asynchronous submission using the HOF
         submitDataAsync(formData, (isSuccess) => {
             if (isSuccess) {
                 form.reset(); 
-                successMessage.style.display = 'block'; // Show success message
+                successMessage.style.display = 'block'; 
                 
-                // Hide success message after 5 seconds
                 setTimeout(() => {
                     successMessage.style.display = 'none';
                 }, 5000);
@@ -309,7 +303,6 @@ function setupCityGallery() {
     const mainCarousel = document.querySelector('.city-carousel');
     if (!mainCarousel) return;
 
-    // Create a new container for the thumbnails
     const thumbnailsContainer = document.createElement('div');
     thumbnailsContainer.classList.add('city-thumbnails');
     mainCarouselWrapper.appendChild(thumbnailsContainer);
@@ -336,7 +329,6 @@ function setupCityGallery() {
             citySlides.forEach(slide => slide.classList.remove('active'));
             citySlides[index].classList.add('active');
 
-            // Update active thumbnail style
             thumbnailImages.forEach(img => img.classList.remove('active-thumbnail'));
             event.target.classList.add('active-thumbnail');
         });
@@ -368,14 +360,13 @@ function updateDateTime() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // General setups
     const registerForm = document.querySelector('.register-box form');
     if (registerForm) {
         registerForm.addEventListener('submit', validateRegistrationForm);
     }
     setupAccordion();
     setupPopup();
-    setupBackgroundColorChanger(); // Retained old function for completeness
+    setupBackgroundColorChanger(); 
 
     // TASK 1: Theme Toggle
     setupThemeToggle();
