@@ -9,7 +9,137 @@ body {
   color: #fff;
   background: url("image/plane.jpg") center/cover no-repeat fixed;
   min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme */
 }
+
+/* ------------------------------------------------ */
+/* TASK 1: Dark Theme Styles */
+/* ------------------------------------------------ */
+
+.btn-theme-toggle {
+    background: #ffd700;
+    color: #002366;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-theme-toggle:hover {
+    background: #ccb000;
+}
+
+body.dark-theme {
+  background: #121212 !important; 
+  color: #e0e0e0; 
+}
+
+body.dark-theme header {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+body.dark-theme .btn-header {
+    background: #555;
+    color: #e0e0e0;
+}
+
+body.dark-theme .btn-header:hover {
+    background: #ffd700;
+    color: #000;
+}
+
+body.dark-theme .btn-theme-toggle {
+    background: #002366;
+    color: #ffd700;
+}
+
+body.dark-theme .btn-theme-toggle:hover {
+    background: #0040a0;
+}
+
+body.dark-theme .hero::after {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .ticket-booking,
+body.dark-theme .about-section,
+body.dark-theme .contact-section,
+body.dark-theme .login-section,
+body.dark-theme .register-section,
+body.dark-theme .services-section {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-theme .ticket-booking h2,
+body.dark-theme .about-section h1,
+body.dark-theme .about-details h2,
+body.dark-theme .partners-section h2,
+body.dark-theme .services-section h1,
+body.dark-theme .services-section h2,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3 {
+    color: #ffd700;
+}
+
+body.dark-theme .about-intro,
+body.dark-theme .about-details,
+body.dark-theme .contact-intro,
+body.dark-theme .card-text-custom,
+body.dark-theme .list-item {
+    color: #c0c0c0;
+}
+
+body.dark-theme .founder-card,
+body.dark-theme .partner-card,
+body.dark-theme .contact-form-custom,
+body.dark-theme .login-box,
+body.dark-theme .register-box,
+body.dark-theme .mq-card,
+body.dark-theme .service-card-custom,
+body.dark-theme .class-card {
+    background: #2a2a2a;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .accordion-header {
+    background: #3a3a3a;
+    color: #e0e0e0;
+}
+
+body.dark-theme .accordion-header:hover {
+    background: #4a4a4a;
+}
+
+body.dark-theme .accordion-header.active {
+    background: #ffd700;
+    color: #000;
+}
+
+body.dark-theme .accordion-content {
+    background: #2a2a2a;
+    color: #c0c0c0;
+}
+
+body.dark-theme .contact-form-custom label {
+    color: #ffd700;
+}
+
+body.dark-theme .contact-form-custom input,
+body.dark-theme .contact-form-custom textarea {
+    border: 1px solid #555;
+    background: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme footer,
+body.dark-theme .footer-services {
+  background: #000;
+}
+/* ------------------------------------------------ */
 
 header {
   position: fixed;
@@ -42,7 +172,7 @@ header {
   align-items: center;
   gap: 40px; 
 }
-
+/* ... [Остальной существующий код header, nav и .hero] ... */
 nav ul {
   list-style: none;
   margin: 0;
@@ -215,6 +345,7 @@ nav a:hover {
   padding: 120px 20px 60px;
   text-align: center;
 }
+/* ... [Остальной существующий код .about-section, .about-intro и т.д.] ... */
 
 .about-section h1 {
   font-size: 42px;
@@ -800,11 +931,13 @@ footer p {
     margin-bottom: 40px;
 }
 
-/* Simplified Carousel */
+/* TASK 2: City Carousel & Thumbnails Styles */
 .city-carousel-wrapper {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
+    flex-direction: column; /* Allows thumbnails to stack below */
+    align-items: center;
 }
 
 .city-carousel-inner {
@@ -814,18 +947,25 @@ footer p {
 
 .city-carousel {
     display: flex;
-    overflow-x: auto; 
+    overflow-x: hidden; /* Hide scrollbar, handled by class switching */
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); 
     border-radius: 0.5rem; 
     overflow: hidden;
     max-height: 450px;
+    position: relative;
 }
 
 .city-slide {
     flex: 0 0 100%;
     scroll-snap-align: start;
+    display: none; /* Hide all by default */
+    transition: opacity 0.3s ease;
+}
+
+.city-slide.active {
+    display: block; /* Show active slide */
 }
 
 .city-slide img {
@@ -835,6 +975,36 @@ footer p {
     object-position: center;
 }
 
+.city-thumbnails {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.thumbnail-img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.thumbnail-img:hover {
+    transform: scale(1.05);
+}
+
+.thumbnail-img.active-thumbnail {
+    border-color: #002366; /* Highlight active thumbnail */
+}
+/* END TASK 2 STYLES */
+
 /* Flight Classes Grid */
 .flight-classes-grid {
     display: flex;
@@ -843,6 +1013,7 @@ footer p {
     justify-content: center;
     margin-top: 30px;
 }
+/* ... [Остальной существующий код flight-classes-grid, class-card, footer] ... */
 
 .class-card-item {
     flex: 1 1 300px;
@@ -1147,4 +1318,17 @@ footer p {
 }
 #change-bg-btn:hover {
     background: #0040a0;
+}
+
+.shake-animation {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  60% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
 }
